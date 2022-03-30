@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import { Button } from '@mui/material';
 
 export default function NewForm() {
   return (
@@ -7,6 +9,7 @@ export default function NewForm() {
         <Section>
           <Header>
             <HeaderTitle placeholder="제목 없는 설문지" />
+            <AcUnitIcon />
             <HeaderDescription placeholder="설문지 설명" />
           </Header>
         </Section>
@@ -15,6 +18,9 @@ export default function NewForm() {
             <QuestionTitle placeholder="제목없는 질문" />
           </Question>
         </Section>
+        <SubmitButton variant="outlined" color="primary">
+          미리보기
+        </SubmitButton>
       </Main>
     </Wrapper>
   );
@@ -67,3 +73,5 @@ const QuestionTitle = styled.textarea`
   width: 446px;
   border: 1px solid ${({ theme }) => theme.borderColor};
 `;
+
+const SubmitButton = styled(Button)``;
