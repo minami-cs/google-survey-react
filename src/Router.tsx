@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from './App';
+import NewForm from './pages/NewForm/NewForm';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<NewForm />} />
       </Routes>
     </BrowserRouter>
   );

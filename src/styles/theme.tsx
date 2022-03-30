@@ -4,6 +4,7 @@ const theme = {
   backgroundColor: '#f0ebf8',
   titleColor: '#202124',
   borderColor: '#dadce0',
+  basicWhite: '#fff',
   lightGrey: '#b9b9b9',
   buttonGrey: '#bdbdbd',
   iconGrey: '#5f6368',
