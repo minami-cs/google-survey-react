@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import { Button } from '@mui/material';
+import FormHeader from '../../components/FormEdit/FormHeader';
 
 export default function NewForm() {
   return (
     <Wrapper>
       <Main>
         <Section>
+          <FormHeader />
           <Header>
             <HeaderTitle placeholder="제목 없는 설문지" />
             <AcUnitIcon />
