@@ -8,6 +8,7 @@ export default function FormHeader() {
 
   return (
     <Header>
+      <TopBand />
       <Title
         fullWidth
         multiline
@@ -25,12 +26,27 @@ export default function FormHeader() {
   );
 }
 
-const Header = styled.div`
-  padding: 22px 24px 24px 24px;
-  border: 1px solid ${({ theme }) => theme.borderColor};
+const Header = styled.div(
+  ({ theme }) => `
+  position: relative;
+  padding: 18px 24px 24px 24px;
+  border: 1px solid ${theme.borderColor};
   border-radius: 8px;
-  background-color: ${({ theme }) => theme.basicWhite};
-`;
+  background-color: ${theme.basicWhite};
+`
+);
+
+const TopBand = styled.div(
+  ({ theme }) => `
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-radius: 8px 8px 0 0;
+  height: 10px;
+  background-color: ${theme.basicPurple};
+`
+);
 
 const Title = styled(TextField)(
   ({ theme }) => `
