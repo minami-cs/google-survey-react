@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import AcUnitIcon from '@mui/icons-material/AcUnit';
 import { Button } from '@mui/material';
 import FormHeader from '../../components/FormEdit/FormHeader';
+import Question from '../../components/FormEdit/Question';
 
 export default function NewForm() {
   return (
@@ -9,16 +9,12 @@ export default function NewForm() {
       <Main>
         <Section>
           <FormHeader />
-          <Header>
-            <HeaderTitle placeholder="제목 없는 설문지" />
-            <AcUnitIcon />
-            <HeaderDescription placeholder="설문지 설명" />
-          </Header>
         </Section>
         <Section>
-          <Question>
+          <Question />
+          <Questions>
             <QuestionTitle placeholder="제목없는 질문" />
-          </Question>
+          </Questions>
         </Section>
         <SubmitButton variant="outlined" color="primary">
           미리보기
@@ -43,26 +39,7 @@ const Main = styled.main`
 
 const Section = styled.section``;
 
-const Header = styled.div`
-  padding: 22px 24px 24px 24px;
-  border: 1px solid ${({ theme }) => theme.borderColor};
-  border-radius: 8px;
-  background-color: ${({ theme }) => theme.basicWhite};
-`;
-
-const HeaderTitle = styled.textarea`
-  resize: none;
-  width: 100%;
-  border: 1px solid ${({ theme }) => theme.borderColor};
-`;
-
-const HeaderDescription = styled.textarea`
-  resize: none;
-  width: 100%;
-  border: 1px solid ${({ theme }) => theme.borderColor};
-`;
-
-const Question = styled.div`
+const Questions = styled.div`
   margin-top: 12px;
   padding: 20px;
   border: 1px solid ${({ theme }) => theme.borderColor};
